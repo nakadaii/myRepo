@@ -1,0 +1,94 @@
+<script>
+ let count = 0;
+
+ const counter = setInterval(() => {
+  console.log(innerWidth);
+
+  count++;
+  if (count === 1000) {
+   clearInterval(counter);
+  }
+ }, 1)
+
+ // -----------------
+
+ let time = new Date();
+ console.log(time);
+
+ let time2 = new Date("2022-05-12 03:12:13.333");
+ console.log(time2);
+
+ time2.setDate(18);
+ console.log(time2.getDay());
+
+ time2.setMonth(9);
+ console.log(time2.getDay());
+
+ // 
+
+ const date = new Date();
+
+ const firstDay = new Date(date.getFullYear(), date.getMonth(), 1);
+ console.log(firstDay.toDateString());
+
+ const lastDay = new Date(date.getFullYear(), date.getMonth() + 1, 0);
+ console.log(lastDay.toDateString());
+
+ // ------------------------
+
+ const prMay = new Date("2022-05");
+ const prMayFirst = new Date(prMay.getFullYear(), prMay.getMonth(), 1);
+ console.log(prMayFirst.getDay());
+
+ const prMayLast = new Date(prMay.getFullYear(), prMay.getMonth() + 1, 0);
+ console.log(prMayLast.getDay());
+
+ // 
+
+ prMayFirst.setDate(prMayFirst.getDate() + 30);
+ console.log(prMayFirst.toDateString());
+
+ prMayFirst.setMonth(prMayFirst.getMonth() + 20);
+ console.log(prMayFirst.toDateString());
+
+
+ // ーーーーーーーーーーーーー
+ // ーーーーーーーーーーーーー
+ // ーーーーーーーーーーーーー
+
+ const fruits = ["banana", "orange", "grape"];
+
+ fruits.push("apple TV");
+ console.log(fruits);
+
+ fruits.unshift("lemon");
+ console.log(fruits);
+
+ let returnVal = fruits.shift();
+ console.log(fruits);
+ console.log(returnVal);
+
+ let returnVall = fruits.pop();
+ console.log(fruits);
+ console.log(returnVall);
+
+ // let deletedVal = fruits.splice(1, 2);
+ // console.log(fruits);
+ // console.log(deletedVal);
+
+ // fruits.splice(0, 1, "apple", "lemon");
+ // console.log(fruits);
+
+ // const newFruits = fruits.concat(["melon", "mango"]);
+ const newFruits = fruits.concat();
+ console.log(newFruits);
+
+ const sliceFruits = fruits.slice(1);
+ console.log(sliceFruits);
+
+ // -----------------------
+
+ const car = ["toyota", "nissan", "suzuki"];
+ const found = car.indexOf("nissan");
+ console.log(found);
+</script>
